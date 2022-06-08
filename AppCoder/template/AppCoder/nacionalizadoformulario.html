@@ -1,0 +1,15 @@
+{% extens "appCoder/padre.html" %}
+{% load static %}
+{% block contenidoquecambia %}
+<h3>Pagina de nacionalizados</h3>
+{% endblock %}
+
+<form> action= "{% url 'nacionalizadoformulario %}" method="POST" {% csrf_token %}
+    <h1>Ingrese sus datos</h1>
+    <p>Nacionalizado: <input type="text" name="nacionalizado"></p>
+    <p>Apellido: <input type="text" name="apellido"></p>
+    <p>Dni: <input type="text" name="dni"></p>
+    <input type="submit" value="Enviar"    
+{% block section_name %}
+<h3>nacionalizado</h3>
+{% endblock %}
